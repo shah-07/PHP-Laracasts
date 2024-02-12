@@ -4,7 +4,7 @@ return $config = [
   'database' => [
     'host' => 'localhost',
     'port' => '3306',
-    'dbname' => 'craftblog',
+    'dbname' => 'tables',
     'charset' => 'utf8mb4',
   ]
 
