@@ -12,4 +12,4 @@ $query = "select * from notes where user_id = {$currentUserId}";
 // $id = $_GET['id'];
 $notes = $db->query($query)->get();
 // dd($db);
-require "views/notes.view.php";
+require "views/notes/index.view.php";
