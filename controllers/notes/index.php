@@ -1,9 +1,10 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-$config = require base_path("config.php");
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
+
 $currentUserId = 1;
 
 $heading = $db->query("select * from users where id={$currentUserId}")->find()['name'] . " Notes";
