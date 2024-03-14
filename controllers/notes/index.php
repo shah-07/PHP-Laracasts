@@ -7,7 +7,7 @@ $db = App::resolve(Database::class);
 
 $currentUserId = 1;
 
-$heading = $db->query("select * from users where id={$currentUserId}")->find()['name'] . " Notes";
+$heading = "My Notes";
 
 $query = "select * from notes where user_id = {$currentUserId}";
 
