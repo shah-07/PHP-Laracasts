@@ -15,4 +15,4 @@ $router->get('/notes/create', 'controllers/notes/create.php');
 $router->post('/notes', 'controllers/notes/store.php');
 
 $router->get('/register', 'controllers/registration/create.php')->only('guest');
-$router->post('/register', 'controllers/registration/store.php');
+$router->post('/register', 'controllers/registration/store.php')->only('guest');
