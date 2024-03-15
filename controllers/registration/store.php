@@ -31,7 +31,7 @@ $user = $db->query('select * from users where email = :email', [
 if ($user) {
   //then someone with that email already exists and has an account
   //if yes, redirect to a login page
-  header('location: /');
+  header('location: /login');
   exit();
 } else {
   //if not, save one to the database, and then log the user in, and redirect.
@@ -41,11 +41,6 @@ if ($user) {
   ]);
 
 
-  //mark that the user has logged in.
-  $_SESSION['user'] = [
-    'email' => $email,
-  ];
-
-  header('location: /');
+  header('location: /login');
   exit();
 }
