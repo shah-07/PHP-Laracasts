@@ -16,8 +16,7 @@
         <div>
           <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
           <div class="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email"
-              value="<?php echo isset($email) ? $email : ''; ?>"
+            <input id="email" name="email" type="email" autocomplete="email" value="<?= old('email') ?>"
               class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 
           </div>
@@ -30,8 +29,7 @@
           </div>
           <div class="py-2" x-data="{ show: true }">
             <div class="relative flex items-center gap-x-2">
-              <input id="password" name="password" value="<?php echo isset($password) ? $password : ''; ?>"
-                :type="show ? 'password' : 'text'"
+              <input id="password" name="password" :type="show ? 'password' : 'text'"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               <div class="relative inset-y-0 right-0 pr-3 text-sm leading-5">
 
@@ -62,12 +60,12 @@
             In</button>
         </div>
         <ul>
-          <?php if (isset($errors['email'])): ?>
+          <?php if (isset ($errors['email'])): ?>
             <p class="text-red-500 text-xs mt-2">
               <?= $errors['email'] ?>
             </p>
           <?php endif; ?>
-          <?php if (isset($errors['password'])): ?>
+          <?php if (isset ($errors['password'])): ?>
             <p class="text-red-500 text-xs mt-2">
               <?= $errors['password'] ?>
             </p>
